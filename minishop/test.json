@@ -1,0 +1,166 @@
+{
+  "info": {
+    "name": "Mini Shop API",
+    "description": "Bộ API hoàn chỉnh cho ứng dụng Mini Shop tích hợp Session & Cookie",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Khách lạ - Xem trang chủ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/home",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "home"
+          ]
+        }
+      }
+    },
+    {
+      "name": "2. Đăng nhập (Khởi tạo Session)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"duy\",\r\n    \"password\": \"123456\"\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. Thêm iPhone vào giỏ hàng",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/cart/add/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "add",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "4. Thêm MacBook vào giỏ hàng",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/cart/add/2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "add",
+            "2"
+          ]
+        }
+      }
+    },
+    {
+      "name": "5. Xem giỏ hàng",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/cart",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "cart"
+          ]
+        }
+      }
+    },
+    {
+      "name": "6. Thiết lập Theme Dark (Cookie)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/set-theme/dark",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "set-theme",
+            "dark"
+          ]
+        }
+      }
+    },
+    {
+      "name": "7. Thành viên - Xem lại trang chủ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/home",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "home"
+          ]
+        }
+      }
+    },
+    {
+      "name": "8. Đăng xuất (Hủy Session)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/logout",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "logout"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
